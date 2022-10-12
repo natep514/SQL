@@ -1,0 +1,10 @@
+CREATE TABLE golf (id INTEGER PRIMARY KEY, Equipment TEXT, Price INTEGER, Quantity INTEGER);
+INSERT INTO golf VALUES
+(1, 'Drivers', 200, 4),
+(2, 'Polos', 40, 7),
+(3, 'Putters', 100, 4),
+(4, 'Balls', 30, 5),
+(5, 'Pants', 50, 2);
+
+SELECT * FROM golf ORDER BY price DESC;
+SELECT SUM(Quantity) FROM golf;
