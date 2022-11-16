@@ -8,3 +8,32 @@ INSERT INTO golf VALUES
 
 SELECT * FROM golf ORDER BY price DESC;
 SELECT SUM(Quantity) FROM golf;
+
+
+*/New Project/*
+
+/* Put your data in here and query it! */
+/* Source: http://www.boxofficemojo.com/alltime/world/ */
+CREATE TABLE topmovies(
+   Rank        INTEGER,
+   Title       TEXT,
+   Studio      TEXT,
+   Worldwide   REAL,
+   Domestic    REAL,
+   DomesticPct REAL,
+   Overseas    REAL,
+   OverseasPct REAL,
+   Year        INTEGER
+);
+
+
+SELECT Studio, MIN(rank) AS studio_highest_ranked FROM topmovies GROUP BY studio;
+
+SELECT Studio, AVG(worldwide) AS avg_ww FROM topmovies GROUP BY studio HAVING avg_ww > 800;
+
+SELECT * from topmovies WHERE Worldwide > 800 AND Domestic < 200
+
+
+
+
+
